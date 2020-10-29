@@ -52,10 +52,10 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 //Redirigir
-                Navigator.push(
+                /*Navigator.push(
                   context,
-                  // MaterialPageRoute(builder: (context) => UpdateUser()),
-                );
+                   MaterialPageRoute(builder: (context) => UpdateUser()),
+                );*/
               },
             ),
             ListTile(
@@ -69,10 +69,10 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 //Redirigir
-                Navigator.push(
+                /*   Navigator.push(
                   context,
-                  //MaterialPageRoute(builder: (context) => CreateAuto()),
-                );
+                  MaterialPageRoute(builder: (context) => CreateAuto()),
+                );*/
               },
             ),
             ListTile(
@@ -86,10 +86,10 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 //Redirigir
-                Navigator.push(
+                /* Navigator.push(
                   context,
-                  //MaterialPageRoute(builder: (context) => OfferData()),
-                );
+                  MaterialPageRoute(builder: (context) => OfferData()),
+                );*/
               },
             ),
             ListTile(
@@ -103,10 +103,10 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 //Redirigir
-                Navigator.push(
+                /*Navigator.push(
                   context,
-                  //MaterialPageRoute(builder: (context) => BookingData()),
-                );
+                  MaterialPageRoute(builder: (context) => BookingData()),
+                );*/
               },
             ),
           ],
