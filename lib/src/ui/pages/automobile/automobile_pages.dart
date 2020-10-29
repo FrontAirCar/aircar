@@ -98,14 +98,22 @@ class _AutomobilePageState extends State<AutomobilePage> {
       itemCount: automobile.length,
       itemBuilder: (ctx, pos) {
         return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            child: ListTile(
-              title: Text(automobile[pos].placa),
-              subtitle: Text(automobile[pos].descripcion),
-            ),
-          ),
-        );
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: Column(
+                children: [
+                  Divider(
+                    height: 10,
+                  ),
+                  InkWell(
+                    child: ListTile(
+                      title: Text(automobile[pos].placa),
+                      subtitle: Text(automobile[pos].descripcion),
+                    ),
+                  ),
+                ],
+              ),
+            ));
       },
     );
   }

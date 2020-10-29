@@ -18,7 +18,7 @@ class AutomobileBloc extends Bloc<AutomobileEvent, AutomobileState> {
       yield AutomobileLoadingState();
       try {
         List<Automobile> automobiles =
-            await automobileRepository.getAutomobiles();
+            await automobileRepository.loadAutomobile();
         yield AutomobileLoadedState(automobile: automobiles);
       } catch (e) {
         yield AutomobileErrorState(message: e.toString());
