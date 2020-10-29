@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'automóvil',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Ubuntu'),
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       home: BlocProvider(
         create: (BuildContext context) =>
-            AutomobileBloc(repository: AutomobileRepository()),
+            AutomobileBloc(automobileRepository: AutomobileRepository()),
         child: AutomobilePage(),
       ),
     );

@@ -7,7 +7,8 @@ import 'package:http/http.dart' as http;
 class AutomobileRepository {
   @override
   Future<List<Automobile>> getAutomobiles() async {
-    var response = await http.get(AutomobileRes.automobilesUrl);
+    var response =
+        await http.get(AutomobileRes.automobilesUrl + 'vehiculo/all');
     if (response.statusCode == 200) {
       var data = json.decode(response.body);
       List<Automobile> automobiles = AutomobileList.fromJson(data).automobiles;

@@ -6,8 +6,8 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
 class AutomobileBloc extends Bloc<AutomobileEvent, AutomobileState> {
-  AutomobileRepository repository;
-  AutomobileBloc({@required this.repository});
+  AutomobileRepository automobileRepository;
+  AutomobileBloc({@required this.automobileRepository});
 
   @override
   AutomobileState get initialState => AutomobileInitialState();
@@ -17,7 +17,8 @@ class AutomobileBloc extends Bloc<AutomobileEvent, AutomobileState> {
     if (event is FetchAutomobileEvent) {
       yield AutomobileLoadingState();
       try {
-        List<Automobile> automobiles = await repository.getAutomobiles();
+        List<Automobile> automobiles =
+            await automobileRepository.getAutomobiles();
         yield AutomobileLoadedState(automobile: automobiles);
       } catch (e) {
         yield AutomobileErrorState(message: e.toString());

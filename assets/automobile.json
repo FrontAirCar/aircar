@@ -1,0 +1,22 @@
+[
+    {
+        "idVehiculo": 1,
+        "marca": "Kia",
+        "modelo": "Picanto",
+        "aniu": 2020,
+        "color": "Rojo",
+        "placa": "QGR123",
+        "descripcion": "BUENO",
+        "estadoVehiculo": true
+    },
+    {
+        "idVehiculo": 2,
+        "marca": "Mazda",
+        "modelo": "Mazda3",
+        "aniu": 2020,
+        "color": "Negro",
+        "placa": "QGER542",
+        "descripcion": "Bueno",
+        "estadoVehiculo": true
+    }
+]
