@@ -99,7 +99,7 @@ class Login extends StatelessWidget {
             textTheme: ButtonTextTheme.primary,
             color: Colors.blue,
             onPressed: () {
-              Navigator.pushNamed(context, '/menu');
+              //Navigator.pushNamed(context, '/menu');
             },
           ),
           Divider(
@@ -116,7 +116,7 @@ class Login extends StatelessWidget {
             textTheme: ButtonTextTheme.primary,
             color: Colors.blue[200],
             onPressed: () {
-              Navigator.pushNamed(context, '/CreateUser');
+              //Navigator.pushNamed(context, '/CreateUser');
             },
           ),
         ],

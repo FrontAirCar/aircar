@@ -32,3 +32,18 @@ class AutomobileRepository {
     }
   }*/
 }
+
+/*
+Future<UserModel> createUser(String identity, String names, String surnames,
+    String address, String phone, String email, String password) async {
+  final String apiUrl = "https://reqres.in/api/users";
+  final response =
+      await http.post(apiUrl, body: {"name": identity, "job": names});
+  if (response.statusCode == 201) {
+    final String msj = response.body;
+    print(msj);
+  } else {
+    return null;
+  }
+}
+*/

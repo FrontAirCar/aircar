@@ -18,5 +18,15 @@
         "placa": "QGER542",
         "descripcion": "Bueno",
         "estadoVehiculo": true
+    },
+    {
+        "idVehiculo": 3,
+        "marca": "Mazda",
+        "modelo": "Mazda3",
+        "aniu": 2020,
+        "color": "Negro",
+        "placa": "QGER542",
+        "descripcion": "Bueno",
+        "estadoVehiculo": true
     }
 ]

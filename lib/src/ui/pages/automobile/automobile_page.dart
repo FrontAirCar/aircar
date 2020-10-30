@@ -2,19 +2,16 @@ import 'package:aircar/src/bloc/automobile/automobile_bloc.dart';
 import 'package:aircar/src/bloc/automobile/automobile_event.dart';
 import 'package:aircar/src/bloc/automobile/automobile_state.dart';
 import 'package:aircar/src/model/automobile_model.dart';
+import 'package:aircar/src/ui/pages/automobile/automobile_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  runApp(AutomobilePage());
-}
-
 class AutomobilePage extends StatefulWidget {
   @override
-  _AutomobilePageState createState() => _AutomobilePageState();
+  AutomobilePageState createState() => AutomobilePageState();
 }
 
-class _AutomobilePageState extends State<AutomobilePage> {
+class AutomobilePageState extends State<AutomobilePage> {
   AutomobileBloc automobileBloc;
 
   @override
@@ -98,23 +95,29 @@ class _AutomobilePageState extends State<AutomobilePage> {
       itemCount: automobile.length,
       itemBuilder: (ctx, pos) {
         return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              child: Column(
-                children: [
-                  Divider(
-                    height: 10,
-                  ),
-                  InkWell(
-                    child: ListTile(
-                      title: Text(automobile[pos].placa),
-                      subtitle: Text(automobile[pos].descripcion),
-                    ),
-                  ),
-                ],
-              ),
-            ));
+          padding: const EdgeInsets.all(8.0),
+          child: InkWell(
+            child: ListTile(
+                leading: Text(automobile[pos].placa),
+                title: Text(automobile[pos].modelo),
+                subtitle: Text(automobile[pos].descripcion),
+                trailing:
+                    Icon(Icons.directions_car, color: Colors.black, size: 80)),
+            onTap: () {
+              navigateToAutomobileDetailPage(context, automobile[pos]);
+            },
+          ),
+        );
       },
     );
+  }
+
+  void navigateToAutomobileDetailPage(
+      BuildContext context, Automobile automobile) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return AutomobileDetailPage(
+        automobile: automobile,
+      );
+    }));
   }
 }
